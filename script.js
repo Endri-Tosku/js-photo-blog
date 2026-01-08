@@ -55,7 +55,7 @@ axios.get(endpoint)
         posts.forEach((post, index) => {
 
             // Destrutturiamo l'oggetto per estrarre solo i dati che ci servono
-            const { url, title, data } = post;
+            const { url, title, date } = post;
 
             // Aggiungiamo alla stringa HTML una nuova card
             postsOutput += `
@@ -64,7 +64,7 @@ axios.get(endpoint)
                     <img class="img" src="${url}" alt="">
                 </div>
                 <h2>${title}</h2>
-                <span>${data}</span>
+                <span>${date}</span>
             </div>`;
 
             // Log di debug per controllare cosa succede ad ogni iterazione
