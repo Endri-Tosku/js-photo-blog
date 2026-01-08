@@ -60,11 +60,12 @@ axios.get(endpoint)
             // Aggiungiamo alla stringa HTML una nuova card
             postsOutput += `
             <div class="card">
+                <img src="./img/pin.svg" class="pin" alt="">
                 <div class="container-img">
                     <img class="img" src="${url}" alt="">
                 </div>
-                <h2>${title}</h2>
-                <span>${date}</span>
+                <h2 class="title">${title}</h2>
+                <span class="date">${date}</span>
             </div>`;
 
             // Log di debug per controllare cosa succede ad ogni iterazione

@@ -4,15 +4,35 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: auto;
+    width: 70%;
+    background-color: black;
+}
+
+header {
+    background-image: url(../img/wall.png);
+    height: 97px;
+}
+
+main {
+    background-image: url(../img/cork.png);
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
 }
 
 .card {
-    margin: 20px 0;
-    width: calc(100% / 5);
+    width: calc(100% / 4);
     border: solid 2px black;
+    background-color: white;
+    padding: 10px;
+    position: relative;
 }
 
 .container-img {
@@ -23,4 +43,19 @@
 .img {
     width: 100%;
     height: 100%;
+}
+
+.title {
+    font-family: "Edu TAS Beginner", sans-serif;
+}
+
+.date {
+    font-family: "Sometype Mono", monospace;
+}
+
+.pin {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
 }
