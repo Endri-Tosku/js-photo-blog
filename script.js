@@ -31,3 +31,8 @@ Note
 
 Non siete obbligati a usare Bootstrap: siete liberi di decidere come gestire lo stile 
 */
+
+
+const outputCont = document.getElementById("container");
+
+const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
