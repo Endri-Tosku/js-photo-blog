@@ -13,6 +13,16 @@ body {
 header {
     background-image: url(../img/wall.png);
     height: 97px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Edu TAS Beginner", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
 }
 
 main {
