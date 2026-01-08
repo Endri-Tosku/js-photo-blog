@@ -39,7 +39,7 @@ const outputCont = document.getElementById("container");
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
 
 
-// Effettuiamo una chiamata AJAX usando axios
+/* // Effettuiamo una chiamata AJAX usando axios
 axios.get(endpoint)
     .then(response => {
         // Questo codice viene eseguito se la chiamata va a buon fine
@@ -78,5 +78,43 @@ axios.get(endpoint)
     })
     .catch(error => {
         // Questo codice viene eseguito se la chiamata fallisce
+        console.error("Errore nella chiamata API:", error);
+    }); */
+
+
+
+
+
+///// USIAMO IL CICLO FOR AL POSTO DI forEach /////
+
+axios.get(endpoint)
+    .then(response => {
+        const posts = response.data;
+        let postsOutput = "";
+
+        // Ciclo classico che ripete su tutte le card ricevute dall'API
+        for (let i = 0; i < posts.length; i++) {
+
+            // Recuperiamo l'oggetto corrente dall'array "posts"
+            const post = posts[i];
+
+            const { url, title, date } = post;
+
+            postsOutput += `
+            <div class="card">
+                <img src="./img/pin.svg" class="pin" alt="">
+                <div class="container-img">
+                    <img class="img" src="${url}" alt="">
+                </div>
+                <h2 class="title">${title}</h2>
+                <span class="date">${date}</span>
+            </div>`;
+
+            console.log("Iterazione numero", i, postsOutput);
+        }
+
+        outputCont.innerHTML = postsOutput;
+    })
+    .catch(error => {
         console.error("Errore nella chiamata API:", error);
     });
