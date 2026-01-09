@@ -43,7 +43,6 @@ main {
     padding: 10px;
     position: relative;
     transition: transform 0.5s ease;
-    border: 2px solid black;
 }
 
 .container-img {
@@ -76,14 +75,17 @@ main {
 
 /* OVERLAY */
 .hidden {
-    /* display: none; */
+    display: none;
+}
+
+.d-flex{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #overlay {
     position: fixed;
-    display: flex; 
-    align-items: center; 
-    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
     top: 0;
