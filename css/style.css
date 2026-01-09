@@ -73,6 +73,39 @@ main {
 }
 
 
+
+/* OVERLAY */
+.hidden {
+    /* display: none; */
+}
+
+#overlay {
+    position: fixed;
+    display: flex; 
+    align-items: center; 
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#close-btn {
+    padding: 5px 5px;
+    font-size: larger;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+#overlay-img {
+    max-width: 50%;
+    max-height: 80%;
+}
+
+
+
 /* Media screen tablet */
 @media screen and (max-width: 1024px) {
 
@@ -99,5 +132,5 @@ main {
     cursor: pointer;
     transform: rotate(15deg) scale(1.1);
     z-index: 7;
-    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.35);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.35);
 }
